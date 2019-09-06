@@ -34,10 +34,10 @@ function createdCarousel() {
   rightButton.classList.add('right-button');
 
   leftButton.textContent = '<';
-  imgOne.src = "./assets/carousel/mountains.jpeg";
-  imgTwo.src ="./assets/carousel/computer.jpeg";
-  imgThree.src ="./assets/carousel/trees.jpeg";
-  imgFour.src ="./assets/carousel/turntable.jpeg";
+  imgOne.src = "/assets/carousel/computer.jpeg";
+  imgTwo.src ="/assets/carousel/mountains.jpeg";
+  imgThree.src ="/assets/carousel/trees.jpeg";
+  imgFour.src ="/assets/carousel/turntable.jpeg";
   rightButton.textContent = '>';
 
   carousel.appendChild(leftButton);
