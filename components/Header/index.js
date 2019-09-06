@@ -23,7 +23,7 @@ function createHeader() {
 
     headerDate.textContent = 'SMARCH 28, 2019';
     title.textContent ='Lambda Times';
-    temperature.textContent = '98&#176;';
+    temperature.textContent = '98';
 
     header.appendChild(headerDate);
     header.appendChild(title);
@@ -32,4 +32,4 @@ function createHeader() {
     return header;
 }
 
-header-container.appendChild(createHeader(obj));
+pageHeader.appendChild(createHeader());
