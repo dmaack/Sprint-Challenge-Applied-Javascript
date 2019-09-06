@@ -12,6 +12,17 @@ const tabs = document.querySelector('.topics');
 
 tabs.appendChild(createdTab('All'));
 
+function removeCards(elements) {
+    elements.forEach(element => {
+        element.remove();
+    })
+} 
+function removeActiveTab(elements) {
+    elements.forEach(element => {
+        element.classList.remove('active-tab');
+    })
+} 
+
 axios
 .get('https://lambda-times-backend.herokuapp.com/topics')
 .then(response => {
@@ -27,15 +38,20 @@ axios
 })
 
 
-
-
-
-
-
 function createdTab(tabData) {
     const tab = document.createElement('div');
     tab.classList.add('tab');
     tab.textContent = tabData;
+    
+
+    tab.addEventListener('click' , (e) => {
+        removeCards(document.querySelectorAll('.card'));
+        removeActiveTab(document.querySelectorAll('.tab'));
+        tab.classList.toggle('active-tab');
+        getCardsForTopic(tabData);
+        
+
+    })
 
     return tab;
 }
