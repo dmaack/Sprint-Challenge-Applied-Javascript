@@ -40,7 +40,7 @@ axios
         cards.appendChild(createdCard(item));
     })
     }
-    if(topic === 'node' || topic ==='All') {
+    if(topic === 'node.js' || topic ==='All') {
     response.data.articles.node.forEach(item => {
         cards.appendChild(createdCard(item));
     })
